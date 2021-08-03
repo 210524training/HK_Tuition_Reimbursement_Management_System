@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+# Tuition Reimbursement Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
 
-## Available Scripts
+TRMS, or Tuition Reimbursement Management System is a full-stack web application that allows employees to submit requests for reimbursements for courses, events, and certifications. These requests can then be approved or rejected by the employee's direct supervisor, department head, and a benefits coordinator while the employee is able to track the status of their requests.
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+### Frontend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* TypeScript
+* [React](https://reactjs.org/)
+* [Jest](https://jestjs.io/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Backend
 
-### `npm test`
+* [Node.js](https://nodejs.org/en/)
+* [Express](https://expressjs.com/)
+* [DynamoDB](https://aws.amazon.com/dynamodb/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To-do list:
+* Expand test coverage
+* Send email notifications to users if request approvals are not timely
+* Auto-approve requests after set time 
+* Upload / display files for review
+* Fix user interface bugs
+* Polish styling
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Getting Started
+   
+> First, you will need to clone the repository to your system, inside a terminal run:
+- `git clone https://github.com/210524training/KRB_Project_2_TRMS_Express.git`
+> Then the navigate to the backend directory and create a .env with the following variables:
+- AWS_PROFILE=YOUR_AWS_PROFILE
+- ENVIROMENT=env
+- PORT=3001
+- SUPER_SECRET_KEY=CREATE_YOUR_OWN
+- WEB_CLIENT_ORIGIN=https://localhost:3000
+> Then, to start the backend run:
+- `npm install`
+- `cd dynamo_scripts`
+- `ts-node createReimbursementTable`
+- `ts-node createUsersTable`
+- `npm start`
+> Finally, navigate to the frontend directory and run
+- `npm install`
+- `npm start`
+> Notice that your will need to manually add users to the DynamoDB users table on the AWS console, I intend to add a script to auto populate the table in the future.
