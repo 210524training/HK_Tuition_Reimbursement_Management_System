@@ -29,7 +29,7 @@ To-do list:
 ## Getting Started
    
 > First, you will need to clone the repository to your system, inside a terminal run:
-- `git clone https://github.com/210524training/KRB_Project_2_TRMS_Express.git`
+- `git clone https://github.com/210524training/HK_Tuition_Reimbursement_Management_System`
 > Then the navigate to the backend directory and create a .env with the following variables:
 - AWS_PROFILE=YOUR_AWS_PROFILE
 - ENVIROMENT=env
