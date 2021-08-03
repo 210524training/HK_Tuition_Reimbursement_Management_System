@@ -17,7 +17,7 @@ TRMS, or Tuition Reimbursement Management System is a full-stack web application
 ## Getting Started
    
 > Clone the repository to your system, inside a terminal run:
-- `git clone https://github.com/210524training/KRB_Project_2_TRMS_Express.git`
+- `git clone https://github.com/210524training/HK_Tuition_Reimbursement_Management_System.git`
 > On the backend run:
 - `npm install`
 - `npm start`
